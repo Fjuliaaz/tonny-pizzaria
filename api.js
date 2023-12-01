@@ -6,14 +6,17 @@ var usuario = {
     senha: 'JuliaF',
     telefone: '119973459',
     id: 1,
-       endereco[{
-        rua: 'Bonita',
-        bairo: 'Jardins das rosas',
-        complemento: 'Casa 35 A',
-        cep: '1345-7890'
+    endereco:
+              [
+                {
+                    rua: 'Bonita',
+                    bairo: 'Jardins das rosas',
+                    complemento: 'Casa 35 A',
+                    cep: '1345-7890'
+                }
+              ]
        }]
         }
-    ]
 
     [{
     nome: 'Raica Martinez',
@@ -21,12 +24,15 @@ var usuario = {
     senha: 'raica123',
     telefone: '119978892',
     id: 2,
-       endereco[{
-        rua: 'Copacabana',
-        bairo: 'Jardins',
-        complemento: 'Apto Bloco A 215',
-        cep: '1345-5402'
-       }]
+    endereco:
+             [
+                {
+                 rua: 'Copacabana',
+                 bairo: 'Jardins',
+                 complemento: 'Apto Bloco A 215',
+                 cep: '1345-5402'
+                }
+             ]
         }
     ]
 
@@ -36,36 +42,44 @@ var usuario = {
     senha: 'jv123',
     telefone: '1199010844',
     id: 1,
-       endereco[{
-        rua: 'Couves',
-        bairo: 'Barueri',
-        complemento: 'Casa 99',
-        cep: '1345-0001'
-       }]
+    endereco:
+             [
+                {
+                    rua: 'Couves',
+                    bairo: 'Barueri',
+                    complemento: 'Casa 99',
+                    cep: '1345-0001'
+                }
+             ]
         }
     ]
-},
 
 var categorias = {
 
     categoria: 
-    [{
-       id: 1,
-       nomeCategoria:'Pizza inteira',
-       icone:''
-    }]
+    [
+        {
+            id: 1,
+            nomeCategoria:'Pizza inteira',
+            icone:''
+        }
+    ]
 
-    [{
-       id:2,
-       nomeCategoria:'Bebidas',
-       icone:''
-    }]
+    [
+        {
+            id: 1,
+            nomeCategoria:'Pizza inteira',
+            icone:''
+        }
+    ]
 
-    [{
-       id: 3,
-       nomeCategoria:'Sobremesas',
-       icone:''
-    }]
+    [
+        {
+            id: 3,
+            nomeCategoria:'Sobremesas',
+            icone:''
+        }
+    ]
    
 }
 
@@ -77,12 +91,15 @@ var produtos = {
             valor: 'R$ 16,00',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
             avaliacao: "",
-            [{
-                usuario: usuario.usuario[1],
-                data: "10/10/2023",
-                comentaio: "prefiro pizza de frango"
-            }]
-        },
+            comentarios: 
+                         [
+                            {
+                                usuario: usuario.usuario[1],
+                                data: "10/10/2023",
+                                comentaio: "prefiro pizza de tomate"
+                            }
+                         ]
+        }
 
         {
             id: '2',
@@ -90,12 +107,15 @@ var produtos = {
             valor: 'R$ 22,00',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
             avaliacao: "",
-            [{
-                usuario: usuario.usuario[2],
-                data: "23/04/2023",
-                comentaio: "prefiro pizza de frango"
-            }]
-        },
+            comentarios: 
+                        [
+                            {
+                                usuario: usuario.usuario[2],
+                                data: "23/04/2023",
+                                comentaio: "prefiro pizza de frango"
+                            }
+                        ]
+        }
 
         {
             id: '3',
@@ -103,23 +123,29 @@ var produtos = {
             valor: 'R$ 12,00',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
             avaliacao: "",
-            [{
-                usuario: usuario.usuario[3] ,
-                data: "15/02/2023",
-                comentaio: "prefiro pizza de queijo"
-            }]
-        },
+            comentarios: 
+                            [
+                                {
+                                    usuario: usuario.usuario[3] ,
+                                    data: "15/02/2023",
+                                    comentaio: "prefiro pizza de queijo"
+                                }
+                            ]
+        }
 
         {
             id: '3',
             produto: 'Coca-cola',
             valor: 'R$ 10,00',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
-            [{
+            cpentarios:
+            [
+                {
                 usuario: usuario.usuario[1],
                 data: "24/11/2023",
                 comentaio: "otima e geladinha"
-            }]
+                }
+            ]
         } 
     ]
 }
