@@ -99,7 +99,7 @@ var produtos = {
                                 comentaio: "prefiro pizza de tomate"
                             }
                          ]
-        }
+        },
 
         {
             id: '2',
@@ -115,7 +115,7 @@ var produtos = {
                                 comentaio: "prefiro pizza de frango"
                             }
                         ]
-        }
+        },
 
         {
             id: '3',
@@ -131,7 +131,7 @@ var produtos = {
                                     comentaio: "prefiro pizza de queijo"
                                 }
                             ]
-        }
+        },
 
         {
             id: '3',

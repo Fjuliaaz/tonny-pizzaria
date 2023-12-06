@@ -2,69 +2,106 @@
 const {usuario, categorias, produtos} = require('./api.js')
 
 const usuario = function() {
-    const usuarioHost = [];
-    const jsonUsuarios = {};
-    let status = false;
+    let usuarios = api.js.usuario
+    let usuariosArray = []
 
-    usuario.cadastro.forEach(usuario => {
-        usuarioHost.push({
-            nomeUsuario: usuario.nomeUsuario,
-            email: usuario.email,
-            telefone: usuario.telefone,
+    usuarios.forEach((usuarios) => {
+
+        let usuariosInfo = {
+            id: usuarios.id,
+            nome: usuario.nome,
+            email: usuarios.email,
+            telefone: usuarios.telefone,
             endereco: usuario.endereco
-        });
-        status = true;
-    });
+        }
 
-    jsonUsuarios.usuario = usuarioHost;
-
-    if (status) {
-        return jsonUsuarios;
-    } else{
-        return false;
-    }
+        usuariosArray.push(usuariosInfo)
+    })
+     
+    let usuariosJSON = { usuariosArray }
+    return usuariosJSON
 };
 
-const getCategoria = function(){
-    const categoriaLocal = [];
-    const jsonCategorias = {};
-    let status = false; 
+//função que pega as informacoes de um produto atravez do seu nome
+const getProduto = function (nomeProduto) {
+    let cont = 0
+    let status = false
+    let jsonProduto = {}
+    while (cont < info.produtos.produto.length) {
+        if (nomeProduto == info.produtos.produto[cont].nome) {
 
-    categoria.categoria.forEach(itemCategoria => {
-        categoriaLocal.push({
-            id: itemCategoria.id,
-            nome: itemCategoria.nome,
-            imagem: itemCategoria.imagem
-        });
-        status = true;
-    });
-
-    jsonCategorias.categoria = categoriaLocal; 
-
+            jsonProduto.nome = info.produtos.produto[cont].nome
+            jsonProduto.preco = info.produtos.produto[cont].preco
+            jsonProduto.descricao = info.produtos.produto[cont].descricao
+            jsonProduto.comentarios = info.produtos.produto[cont].comentarios
+            status = true
+        }
+        cont++
+    }
     if (status) {
-        return jsonCategorias;
-    } else{
-        return false;
+        return jsonProduto
+    }
+    else {
+        return status
     }
 
 }
 
-const produtos = function() {
-    const produtos = [];
-    const jsonprodutos = {};
-    let status = false;
-
-    produtos.produtos.forEach(produto => {
-        produtos.push({
-            id: produto.id,
-            nome: produto.nome,
-            comentarios: 
-        })
+const getCategoria = function (tipo) {
+    let categorias = api.js.categorias
+    let categoriasArray = []
+    
+    categorias.forEach((categoria) => {
         
-        status = true;
-    });
+        let categoriaInfo = {
+            id: categoria.id,
+            nome: categoria.nome,
+            icone: categoria.icone 
+        }    
+        
+        categoriasArray.push(categoriaInfo)
 
-    jsonprodutos.produtos = produto
+    })
+
+    let categoriasJSON = { categoriasArray }
+    return categoriasJSON
+}
+
+const comentarios = () => {
+    let produtos = api.js.produtos
+    let comentariosArray = []
+    let idProduto = id
+    let status = false
+    
+    produtos.forEach((pizza) => {
+        
+        if(pizza.id == idProduto){
+            pizza.comentarios.forEach ((comentarios) => {
+            
+                let comentariosJSON = {
+                    
+                    id: comentarios.id,
+                    comentarios: comentarios.message,
+                    data: comentarios.data,
+                    usuario: comentarios.usuario.id
+                }
+                
+                status = true
+                comentariosArray.push(comentariosJSON)
+
+            })
+
+        }
+
+    })
+
+    let comentariosJSON = { comentariosArray }
+
+    if(status){
+        return comentariosJSON
+    } else {
+        return false
+    }
 }
 
 module.export ={usuario,categorias,produtos}
