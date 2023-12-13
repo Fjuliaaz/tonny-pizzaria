@@ -1,90 +1,75 @@
-var usuario = {
-    usuario:
-    [{
-    nome: 'Julia Fonseca',
-    email: 'Julia123@gmail.com',
-    senha: 'JuliaF',
-    telefone: '119973459',
-    id: 1,
-    endereco:
-              [
-                {
-                    rua: 'Bonita',
-                    bairo: 'Jardins das rosas',
-                    complemento: 'Casa 35 A',
-                    cep: '1345-7890'
-                }
-              ]
-       }]
-        }
-
-    [{
-    nome: 'Raica Martinez',
-    email: 'raica@gmail.com',
-    senha: 'raica123',
-    telefone: '119978892',
-    id: 2,
-    endereco:
-             [
-                {
-                 rua: 'Copacabana',
-                 bairo: 'Jardins',
-                 complemento: 'Apto Bloco A 215',
-                 cep: '1345-5402'
-                }
-             ]
-        }
-    ]
-
-    [{
-    nome: 'Joao Vitor',
-    email: 'joaoVitor@gmail.com',
-    senha: 'jv123',
-    telefone: '1199010844',
-    id: 1,
-    endereco:
-             [
-                {
-                    rua: 'Couves',
-                    bairo: 'Barueri',
-                    complemento: 'Casa 99',
-                    cep: '1345-0001'
-                }
-             ]
-        }
-    ]
-
-var categorias = {
-
-    categoria: 
-    [
+var usuario = [
+    {
+        nome: 'Julia Fonseca',
+        email: 'Julia123@gmail.com',
+        senha: 'JuliaF',
+        telefone: '119973459',
+        id: 1,
+        endereco:
+                  [
+                    {
+                        rua: 'Bonita',
+                        bairo: 'Jardins das rosas',
+                        complemento: 'Casa 35 A',
+                        cep: '1345-7890'
+                    }
+                  ]
+           },
         {
-            id: 1,
-            nomeCategoria:'Pizza inteira',
-            icone:''
-        }
-    ]
-
-    [
+        nome: 'Raica Martinez',
+        email: 'raica@gmail.com',
+        senha: 'raica123',
+        telefone: '119978892',
+        id: 2,
+        endereco:
+                 [
+                    {
+                     rua: 'Copacabana',
+                     bairo: 'Jardins',
+                     complemento: 'Apto Bloco A 215',
+                     cep: '1345-5402'
+                    }
+                 ]
+            },
+    
         {
-            id: 1,
-            nomeCategoria:'Pizza inteira',
-            icone:''
-        }
-    ]
-
-    [
-        {
-            id: 3,
-            nomeCategoria:'Sobremesas',
-            icone:''
-        }
-    ]
+        nome: 'Joao Vitor',
+        email: 'joaoVitor@gmail.com',
+        senha: 'jv123',
+        telefone: '1199010844',
+        id: 1,
+        endereco:
+                 [
+                    {
+                        rua: 'Couves',
+                        bairo: 'Barueri',
+                        complemento: 'Casa 99',
+                        cep: '1345-0001'
+                    }
+                 ]
+            }
+        
+]
+    
+var categorias = [
+    {
+        id: 1,
+        nomeCategoria:'Pizza inteira',
+        icone:''
+    },
+    {
+        id: 1,
+        nomeCategoria:'Pizza inteira',
+        icone:''
+    },
+   {
+        id: 3,
+        nomeCategoria:'Sobremesas',
+        icone:''
+    }
+]
    
-}
-
-var produtos = {
-    produtos: [
+var produtos = [
         {
             id: '1',
             produto: 'Pizza de calabresa com queijo',
@@ -94,7 +79,7 @@ var produtos = {
             comentarios: 
                          [
                             {
-                                usuario: usuario.usuario[1],
+                                usuario: usuario[1],
                                 data: "10/10/2023",
                                 comentaio: "prefiro pizza de tomate"
                             }
@@ -110,7 +95,7 @@ var produtos = {
             comentarios: 
                         [
                             {
-                                usuario: usuario.usuario[2],
+                                usuario: usuario[2],
                                 data: "23/04/2023",
                                 comentaio: "prefiro pizza de frango"
                             }
@@ -126,7 +111,7 @@ var produtos = {
             comentarios: 
                             [
                                 {
-                                    usuario: usuario.usuario[3] ,
+                                    usuario: usuario[3] ,
                                     data: "15/02/2023",
                                     comentaio: "prefiro pizza de queijo"
                                 }
@@ -141,13 +126,12 @@ var produtos = {
             cpentarios:
             [
                 {
-                usuario: usuario.usuario[1],
+                usuario: usuario[1],
                 data: "24/11/2023",
                 comentaio: "otima e geladinha"
                 }
             ]
         } 
     ]
-}
 
-module.export = {usuario,categorias,produtos}
+module.exports = {usuario,categorias,produtos}

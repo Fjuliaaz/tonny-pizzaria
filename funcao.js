@@ -1,18 +1,18 @@
 
-const {usuario, categorias, produtos} = require('./api.js')
+const user = require('./api.js')
 
-const usuario = function() {
-    let usuarios = api.js.usuario
+const getUsuario = function() {
+    let usuarios = user.usuario
     let usuariosArray = []
 
     usuarios.forEach((usuarios) => {
 
         let usuariosInfo = {
             id: usuarios.id,
-            nome: usuario.nome,
+            nome: user.nome,
             email: usuarios.email,
             telefone: usuarios.telefone,
-            endereco: usuario.endereco
+            endereco: user.endereco
         }
 
         usuariosArray.push(usuariosInfo)
@@ -104,6 +104,6 @@ const comentarios = () => {
     }
 }
 
-module.export ={usuario,categorias,produtos}
+module.exports ={getUsuario,getCategoria,getProduto}
 
 
